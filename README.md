@@ -296,3 +296,26 @@ git push
 ```
 If you have your SSH keys added correctly, this should update github's copy of
 the repo with your commits.
+
+### Phase 2 Command Reference
+
+#### git subcommands
+| Git Command  | Description  | Example  |
+|--------------|--------------|----------|
+| `git status`  | Get a status of the current repo/directory.  | `git status`  |
+| `git diff`  | Get changes between two versions of a file.  | `git diff tictactoe.py`  |
+| `git add`  | Stage files for committing.  | `git add tictactoe.py`  |
+| `git commit`  | Commit changes locally.  | `git commit -m "my commit message"`  |
+| `git push`  | Push your local commits to a remote repository.  | `git push`  |
+| `git rm`  | Untrack a file and delete it.  | `git rm README.md`  |
+| `git log`  | Get a list of commits that have been made to the repo.  | `git log`  |
+
+#### git diff
+| Option  | Description  | Example  |
+|---------|--------------|----------|
+| `--staged`  | Show changes between the staged version of a file and the commit you're on  | `git diff --staged tictactoe.py`  |
+
+#### git commit
+| Option  | Description  | Example  |
+|---------|--------------|----------|
+| `-m`  | Provide a message describing your commit.  | `git commit -m "fixed #29"`  |
