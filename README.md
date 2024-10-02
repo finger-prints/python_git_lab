@@ -48,6 +48,7 @@ about it, you need to tell ssh that you are going to use that key. You do that
 by running an `ssh-agent` and adding your key to it. Since your key is encryted
 with a secret, you'll have to redo this every time you restart your computer or
 your shell loses configuration.
+
 1. In a terminal, start your agent
 ```
 ssh-agent > ~/.ssh/agent.sh
@@ -55,11 +56,13 @@ ssh-agent > ~/.ssh/agent.sh
 `ssh-agent` creates an agent process on your computer and prints some
 environment variables that your shell can store to keep track of your agent. In
 this case, the `>` operator redirects the output to a file at `~/.ssh/agent.sh`.
+
 2. Have your shell run/save environment variables from that file by running
 ```
 source ~/.ssh/agent.sh
 ```
 `source` is a command built into your shell that executes a script in your shell (aka updates your environment variables).
+
 3. Add the private key you created
 ```
 ssh-add ~/.ssh/github
