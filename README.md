@@ -10,12 +10,13 @@ I'm the project lead hosting the repository, and you are an engineer who's going
 to add features.
 
 ### Generating an SSH Key
-In order for `github.com` to know who you are, you have to authenticate somehow
-- you could do username and password authentication, but I don't love the way
-github handles that. So I want you to use SSH keys. With SSH keys, you generate
-a private key and a public key. Then you can share the public key with anyone on
+In order for `github.com` to know who you are, you have to authenticate either
+by username & password or by SSH keys - but I don't love the way github handles
+username/password. So I want you to use SSH keys. With SSH keys, you generate a
+private key and a public key. Then you can share the public key with anyone on
 the internet, and they can verify if they are talking to you by asking you a
-challenge that only someone with the private key could answer. So let's get to it.
+challenge that only someone with the private key could answer. So let's get to
+it.
 
 1. First, you need to generate a keypair. In a handy dandy terminal, run the
 `ssh-keygen` command:
