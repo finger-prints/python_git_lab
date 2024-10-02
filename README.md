@@ -203,3 +203,96 @@ Since we're learning git/github, I've decided to tell you what to do through
 **issues** - github's way to report bugs or request features in the repository.
 
 I'll try to be descriptive about each thing I want you to do in this repo's [issues](https://github.com/finger-prints/python_git_lab/issues).
+
+### How to track your progress
+Once you've cloned the repo and picked an issue to start on (hopefully the one
+labeled good for newcomers), you can start writing code for that issue in
+`tictactoe.py`.
+
+#### Issue Tracking
+Once I've added you to the repo and you've accepted, you should be able to
+assign yourself to issues to claim that you're working on that. Feel free to
+make comments on what you're thinking or tracking your progress.
+
+#### git diff
+If you want to see what you've changed, you can run `git diff`:
+```
+git diff tictactoe.py
+```
+Git will try to tell you what you've changed - lines that are green or start
+with `+` are added, lines that are red or start with `-` have been removed. It
+references where it is in code with a header `@@` with a line number/position
+and some extra unchanged lines at the beginning and end.
+
+If you've already staged a file, you can see changes to that with `--staged`:
+```
+git diff --staged tictactoe.py
+```
+
+#### git status
+If you want to see what files you've changed in the repository, you can run
+`git status`:
+```
+> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        my_key
+        my_key.pub
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+- **Changes not staged for commit** displays files that are tracked in the
+repository that you have changed without committing. 
+- **Untracked files** displays files that you have made that don't exist in the
+repo.
+
+#### Staging / git add
+Once you've written enough that you can describe what you did briefly and have
+some progress, you'll want to add and commit your changes. `git add` tells git
+that you want your next commit to have the changes you've made to the files you
+add:
+```
+git add README.py
+```
+After running that command, running `git status` gives:
+```
+> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        my_key
+        my_key.pub
+```
+Now `README.md` appears under **Changes to be committed**.
+
+#### Committing changes
+Now you can commit your changes. Of course you don't necessarily need to run
+`git status` on every side, but it doesn't hurt to double check your commits.
+You can make tracking changes in github a little easier by referencing issue
+numbers in your commits. If you were working on issue #1 and have finished, you
+could make the following commit and github will automatically close the commit.
+```
+git commit -m "implemented x. closes #1"
+```
+
+#### Updating remotes (github)
+Now the only thing left is to push your changes back to github using `git push`:
+```
+git push
+```
+If you have your SSH keys added correctly, this should update github's copy of
+the repo with your commits.
