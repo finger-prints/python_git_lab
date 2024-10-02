@@ -148,3 +148,53 @@ you have the preceding `-`.
 
 Generally with `ps`, 99% of the time I'm going to just throw the entire `-eaf`
 to get a full listing.
+
+## Phase 2 - Tic Tac Toe
+This time, I've made a really quick version of tic tac toe. I decided to
+represent the whole game as `class TicTacToe`. As you somewhat know, classes are
+a way to group data and group some functions as specifically attached to that
+class.
+
+### The Data
+When you define a class, you can then create an **instance** of a class by
+assigning it to a variable.
+```
+class TicTacToe:
+    # some definition of what it means to be a tic tac toe
+
+# making a specific instance and storing it as my_tictactoe
+my_tictactoe = TicTacToe()
+```
+
+**Instance variables** are variables unique to each instance of the class.
+**Static variables** are variables that are the same across all instances of a
+*class.
+
+Both types are referenced by `my_tictactoe.variable`, but static variables can
+also be referenced with `TicTacToe.variable` since the variable is the same for
+the class as a whole. In my `TicTacToe` class, all of the data is stored in
+**instance variables**. In Python, unlike a lot of other languages, instance
+variables are defined in the initializer (also called constructors in other
+languages) - a special function called `__init__()` that you define to tell
+python how to setup a class.
+
+So you can see the data in `tictactoe.py`:
+```
+class TicTacToe:
+    def __init__(self):
+        self.board = [" "] * 9
+        self.game_state = GameState.NOT_FINISHED
+```
+
+There are two variables - `self.board` and `self.game_state` (`self` is a way to
+refer to an instance from functions defined in the class - when a function takes
+`self` as the first argument, it uses `self.variable` or `self.function()` to
+access its instance variables and functions)
+- `self.board` is a list with 9 characters that should be either "X", " ", or "O".
+- `self.game_state` is an enum that represents what state the game is in (more on enums later)
+
+### So what's the lab?
+Since we're learning git/github, I've decided to tell you what to do through
+**issues** - github's way to report bugs or request features in the repository.
+
+I'll try to be descriptive about each thing I want you to do in this repo's [issues](./issues)
