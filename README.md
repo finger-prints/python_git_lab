@@ -198,6 +198,41 @@ access its instance variables and functions)
 - `self.board` is a list with 9 characters that should be either "X", " ", or "O".
 - `self.game_state` is an enum that represents what state the game is in (more on enums later)
 
+### Member Methods
+As you know, you can define functions in Python by writing `def
+my_function(argument1, argument2, ...)`. That function takes `argument1`,
+`argument2`, etc. as input variables that it can then use to do something and
+return a result.
+
+When you put a function in a python file with no specific scope (no indent), that function
+belongs to the python file itself (called a module in python-lingo).
+
+You can also put functions in the scope of a class to have that function be tied
+to the class. Then, if you have an instance called `my_tictactoe`, you can run
+that function by writing `my_tictactoe.my_function()`. We call these **member
+methods** of the function.
+
+In order for a member method to operate on the instance's data, the function has
+to have a `self` argument as the first argument. However, when you call that
+function on an instance, the `self` argument is implied by the fact that you use
+`my_instance.` - aka this function is operating on `my_instance`.
+```
+class Car:
+    def __init__(self, make, model):
+        self.make = make
+        self.model = model
+        self.top_speed = 0
+    def set_top_speed(self, speed):
+        self.top_speed = speed
+
+my_car = Car('Volkswagen', 'Passat')    # create a car stored in my_car
+my_car.set_top_speed(120)               # set the car's top speed using Car.set_top_speed() - no self needed
+```
+
+In this lab, you're welcome to use the member functions I've written or create
+your own. Most of the assignments are functions that have been mapped out with
+definiton and return but have no logic.
+
 ### So what's the lab?
 Since we're learning git/github, I've decided to tell you what to do through
 **issues** - github's way to report bugs or request features in the repository.
