@@ -202,4 +202,4 @@ access its instance variables and functions)
 Since we're learning git/github, I've decided to tell you what to do through
 **issues** - github's way to report bugs or request features in the repository.
 
-I'll try to be descriptive about each thing I want you to do in this repo's [issues](./issues)
+I'll try to be descriptive about each thing I want you to do in this repo's [issues](https://github.com/finger-prints/python_git_lab/issues).
