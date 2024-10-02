@@ -26,6 +26,7 @@ In this command, `-t` is specifying the type of encryption (rsa and ed25519 are
 the most well-used I believe). `-f` is telling the output location. So when I
 run the command, it creates two files: `~/.ssh/github` (private key) and
 `~/.ssh/github.pub` (public key).
+
 2. Now we have to tell github about this key. Go to https://github.com
 3. Click on the profile icon in the top right and go to **Settings**
 ![](./images/github_profile_icon.jpg)
