@@ -37,8 +37,11 @@ class TicTacToe:
 
     def can_place_move(self, idx):
         #TODO: check if the tile is empty
-        return True
-
+        if self.board[idx] == ' ':
+            return True
+        else:
+            return False
+        
     def update_game_state(self):
         #TODO: make this actually do something
         return
